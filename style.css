@@ -1,15 +1,39 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  background: #f2f5f7; /* мягкий голубой фон */
+  background: #f9f9f9; /* мягкий светло-серый фон */
   color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #ff8c42, #ff6b35); /* тёплый градиент */
+  color: white;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+header nav a:hover {
+  color: #fff4e6; /* светлый акцент при наведении */
 }
 
 #hero {
   text-align: center;
-  padding: 50px 20px;
-  background: #ffe5d4; /* мягкий персиковый */
-  color: #222;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #ffd3b6, #ffaaa5); /* мягкий персиковый градиент */
   border-bottom: 2px solid #ccc;
 }
 
@@ -26,28 +50,38 @@ body {
 
 .card {
   background: #ffffff;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 20px;
   width: 220px;
   text-align: center;
-  box-shadow: 2px 2px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card h3 {
-  margin: 0 0 10px;
-}
-
-.card p {
-  margin: 5px 0;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .card button {
-  background: #ff5722; /* яркий оранжевый */
+  background: #ff6b35; /* насыщенный коралловый */
   color: white;
   border: none;
   padding: 10px;
   cursor: pointer;
   border-radius: 5px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: #ff3d00; /* чуть ярче при hover */
+}
+
+.menu-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 #reviews {
@@ -70,21 +104,111 @@ body {
 #cart {
   position: fixed;
   top: 80px;
-  right: 20px;
+  right: -320px;
   background: #fff;
-  border: 1px solid #ccc;
-  padding: 20px;
-  width: 220px;
   border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+  transition: 0.3s;
+  z-index: 100;
 }
 
-#cart .login-button {
-  display: inline-block;
-  margin-top: 10px;
-  text-decoration: none;
+#cart.show {
+  right: 20px;
+}
+
+#cart button {
+  width: 100%;
+  background: #ff6b35;
   color: white;
-  background: #0077cc;
-  padding: 8px 12px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
   border-radius: 5px;
-  text-align: center;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+#cart button:hover {
+  background: #ff3d00;
+}
+#reviews {
+  padding: 40px 20px;
+  background: #fff5f0;
+}
+
+#reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 700px;
+  margin-top: 20px;
+}
+
+.review-card {
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.review-card h4 {
+  margin: 0 0 5px;
+  color: #ff6b35;
+}
+
+.review-card p {
+  margin: 0 0 10px;
+  font-style: italic;
+}
+
+.review-card span {
+  font-size: 0.85em;
+  color: #999;
+}#reviews {
+  padding: 40px 20px;
+  background: #fff5f0;
+}
+
+#reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 700px;
+  margin-top: 20px;
+}
+
+.review-card {
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.review-card h4 {
+  margin: 0 0 5px;
+  color: #ff6b35;
+}
+
+.review-card p {
+  margin: 0 0 10px;
+  font-style: italic;
+}
+
+.review-card span {
+  font-size: 0.85em;
+  color: #999;
 }
