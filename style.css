@@ -1,0 +1,90 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #f2f5f7; /* мягкий голубой фон */
+  color: #333;
+}
+
+#hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: #ffe5d4; /* мягкий персиковый */
+  color: #222;
+  border-bottom: 2px solid #ccc;
+}
+
+#menu {
+  padding: 40px 20px;
+}
+
+.menu-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin: 0 0 10px;
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+.card button {
+  background: #ff5722; /* яркий оранжевый */
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#reviews {
+  padding: 40px 20px;
+}
+
+#reviews form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+#reviews-list {
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+#cart {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 220px;
+  border-radius: 10px;
+}
+
+#cart .login-button {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+  background: #0077cc;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-align: center;
+}
